@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .east-limitdown{
+            width: 400px;
+            height: 200px;
+            border: 1px solid hotpink;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .east-limitdown-spano{
+            font-size: 42px;
+            line-height: 80px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            color: #fff;
+            font-family: PingFangSC-Medium;
+              /*渐变背景*/
+            background-image: -webkit-linear-gradient(left, rgb(233, 10, 233), #ee4141 45%,#aa0c0c 90%, rgb(7, 232, 248));
+            color: transparent; /*文字填充色为透明*/
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景 */
+            background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+            /* 动画 */
+            animation: masked-animation 2s infinite linear;
+        }
+        @keyframes masked-animation {
+            0% {
+            background-position: 0 0;   /*background-position 属性设置背景图像的起始位置。*/
+        }
+        100% {
+            background-position: -100% 0;
+            }
+        }
+        .east-limitdown-spant {
+            font-size: 42px;
+            line-height: 80px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            color: #fff;
+            font-family: PingFangSC-Medium;
+              /*渐变背景*/
+            background-image: -webkit-linear-gradient(left, rgb(7, 232, 248), #5586ee 45%,#6834e0 90%, rgb(236, 14, 136));
+            color: transparent; /*文字填充色为透明*/
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景 */
+            background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+            /* 动画 */
+            animation-delay:2s;
+            -webkit-animation-delay:2s; /* Safari 和 Chrome */
+            animation: masked-animation 2s infinite linear;
+            
+        }
+        .east-limitdown-spanth{
+            font-size: 42px;
+            line-height: 80px;
+            width: 80px;
+            height: 80px;
+            text-align: center;
+            color: #fff;
+            font-family: PingFangSC-Medium;
+              /*渐变背景*/
+            background-image: -webkit-linear-gradient(left, rgb(236, 14, 136), #1f0202 45%,#eecfcf 90%, rgb(238, 206, 28));
+            color: transparent; /*文字填充色为透明*/
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;          /*背景剪裁为文字，只将文字显示为背景 */
+            background-size: 200% 100%;            /*背景图片向水平方向扩大一倍，这样background-position才有移动与变化的空间*/
+            animation-delay:2s;
+            -webkit-animation-delay:2s; /* Safari 和 Chrome */
+            /* 动画 */
+            
+            animation: masked-animation 2s infinite linear;
+        }
+    </style>
+</head>
+<body>
+    <div  class="east-limitdown">
+        <span class="east-limitdown-spano">13</span>
+        <span class="east-limitdown-spant">14</span>
+        <span class="east-limitdown-spanth">52</span>
+    </div>
+</body>
+<script src="js/jquery-1.12.4.js"></script>
+<script src="js/index.js"></script>
+</html>
